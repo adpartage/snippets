@@ -31,7 +31,8 @@
           <Function>SimpleTypeName(Test)</Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp"><![CDATA[[$TestFixture$]
+      <Code Language="csharp"><![CDATA[
+	  [$TestFixture$]	  
       public class $name$Test
       {
 		private I$name$ GetTarget()
@@ -42,6 +43,7 @@
 		[$Test$]
 		public void _Test()
 		{
+			var sut = GetTarget();
 		}$end$
       }]]></Code>
     </Snippet>
