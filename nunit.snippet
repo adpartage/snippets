@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>NUnit Test Class</Title>
+      <Shortcut>test</Shortcut>
+      <Description>Code snippet for a NUnit test class</Description>
+      <Author>Lans M</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the test class</ToolTip>
+          <Default>ClassToTest</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>TestFixture</ID>
+          <Function>SimpleTypeName(TestFixture)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>Test</ID>
+          <Function>SimpleTypeName(Test)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[[$TestFixture$]
+      public class $name$Test
+      {
+		private I$name$ GetTarget()
+		{
+			return new $name$();
+		}		
+		
+		[$Test$]
+		public void _Test()
+		{
+		}$end$
+      }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
